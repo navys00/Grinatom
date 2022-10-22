@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-Cagz9D_vL_FsBNMpW66f5MHET5TS6EGTDXF0KzaoXutDtLf1JzActDFkqmmBqm-VRwaRjf_5JhzLXGQ9N_2w_FwEg07o3_xQktXQPISPyj3IgeSkbz1E_ZrBBq_6v6DAqhASEmKW0NR8HtrsPsZnh50NIEejTajnhhMOv83BPRmS1UPqI5xMesOvYjoG0bWvsn_Zlr-xcLzN-hi-1yW_-XwXhK_1Apak2rh1pgI1V6f-x0n-MY-CRsckL-LfNZfN3FAoHJf801FD-gswG2JjpukGLBXkOlJueDHPD5voIXqrQUUp23OGMgMtrREAf4BsIVxUUBU7MS7A1SdOND1OqzWZez8fA7R9thTkpBDptMT7rF2fMEgaCVEuPYVfEmHIqy2pUuIqmheOUIUyqvONqw7GLxUxuosVstx86KfahyOhtTdXaP26l0r4VfiyvZR5WeS7m-ktSkBmaMFUucwg-OoFAelUjv0jP1w8wJFsraYHxMj7PJVIE4yQwSl0XnFOyTycwvcIxMNydVd35Vkxjme5gcogmClpouCgPpOXf4HsRwkVIz-I36VlR3ZLKB0cT062PlVk8-wCV6ezTyQDg" charset="UTF-8"></script><style>
+        :root {
+            color: #222;
+            font-family: Arial;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            background-color: #eee;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        div {
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid magenta;
+        }
+        .closed {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+<button id="myBtn">Toggle spoiler</button>
+
+<div id="spoiler" class="closed">
+    <p>Some text in the Spoiler..</p>
+</div>
+
+    <script>
+const btn=document.getElementById('myBtn');
+const div=document.getElementById('spoiler');
+function f()
+{
+    if(div.className==='closed'){
+        div.className='open';
+
+    }
+    else{
+        div.className='closed';
+    }
+}
+function f2(atr)
+{
+    if((atr.code==='Escape')&&(div.className==='open')){
+        f();
+    }
+}
+btn.addEventListener('click',f);
+document.addEventListener('keydown',f2);
+   </script>
+</body>
+
+</html>
